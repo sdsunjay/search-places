@@ -105,3 +105,4 @@ venv.bak/
 
 # ignore
 us_institutions.json
+config.py
