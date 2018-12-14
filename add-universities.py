@@ -13,12 +13,15 @@ def parse(filename):
             lookup(d["institution"], gmaps)
 
 def lookup(name, gmaps):
-    
+
     # name = 'California Polytechnic State University-San Luis Obispo'
     # Geocoding an address
     # geocode_result = gmaps.geocode('1600 Amphitheatre Parkway, Mountain View, CA')
     result = gmaps.places(name)
-    print(result)
+    gmaps.place(result['place_id'],
+
+            'ChIJN1t_tDeuEmsRUsoyG83frY4',
+                          fields=['geometry', 'id'], language=self.language)
 
 def main():
     parse('us_institutions.json')
